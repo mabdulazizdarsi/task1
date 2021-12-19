@@ -23,6 +23,9 @@ class stockController extends Controller
         if($leng>2){
         $stock=[$stock_original[0],$stock_original[$leng-1]];
         }
+        else{
+            $stock=$stock_original;
+        }
     }
     return Inertia::render('Welcome', [
         'brands'=>brand::all(),
